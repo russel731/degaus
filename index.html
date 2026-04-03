@@ -1,291 +1,378 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Демагнитизатор 220В — купить в Москве</title>
-  <meta name="description" content="Профессиональный демагнитизатор-размагничиватель 220В. Быстро снимает намагниченность с инструмента, отвёрток, деталей, часов. Новый, в наличии. Москва."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Демагнитизатор 220В — купить размагничиватель</title>
+  <meta name="description" content="Демагнитизатор-размагничиватель 220В для инструмента, деталей механизмов и часов. Подходит для мастерских, СТО, производства и дома." />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --blue: #1a6dff;
-      --blue-dark: #0050d8;
-      --orange: #ff6a00;
-      --dark: #0f1117;
-      --gray: #1e2130;
-      --gray2: #2a2e42;
-      --text: #e8eaf0;
-      --muted: #8b90a8;
-      --white: #ffffff;
+      --bg: #f6f7f9;
+      --surface: #ffffff;
+      --surface-2: #eef2f6;
+      --text: #18212b;
+      --muted: #617285;
+      --line: #d7dee6;
+      --primary: #0f62fe;
+      --primary-dark: #0b4dcc;
+      --accent: #ff7a00;
+      --success: #1f8f55;
+      --shadow: 0 20px 60px rgba(15, 32, 56, 0.12);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --container: 1180px;
     }
-
+    * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: var(--dark);
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
       color: var(--text);
-      line-height: 1.6;
+      background:
+        radial-gradient(circle at top right, rgba(15,98,254,.10), transparent 25%),
+        radial-gradient(circle at left center, rgba(255,122,0,.08), transparent 20%),
+        var(--bg);
+      line-height: 1.55;
     }
-
-    /* ===== HEADER ===== */
-    header {
-      background: rgba(15,17,23,0.95);
-      backdrop-filter: blur(10px);
-      position: sticky; top: 0; z-index: 100;
-      border-bottom: 1px solid #1e2130;
-      padding: 14px 24px;
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
+    .topbar {
+      position: sticky; top: 0; z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(246,247,249,.86);
+      border-bottom: 1px solid rgba(215,222,230,.8);
+    }
+    .topbar-inner {
       display: flex; align-items: center; justify-content: space-between;
+      gap: 18px; padding: 14px 0;
     }
-    .logo { font-size: 1.1rem; font-weight: 700; color: var(--white); }
-    .logo span { color: var(--blue); }
-    .header-cta {
-      background: var(--orange);
-      color: #fff;
-      border: none; border-radius: 8px;
-      padding: 10px 22px; font-size: 0.95rem; font-weight: 700;
-      cursor: pointer; text-decoration: none;
-      transition: background 0.2s;
-    }
-    .header-cta:hover { background: #e05a00; }
-
-    /* ===== HERO ===== */
-    .hero {
-      background: linear-gradient(135deg, #0f1117 0%, #101630 60%, #0a0f25 100%);
-      padding: 70px 24px 60px;
-      text-align: center;
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; top: -40%; left: 50%;
-      transform: translateX(-50%);
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(26,109,255,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(26,109,255,0.15);
-      border: 1px solid rgba(26,109,255,0.4);
-      color: #6fa3ff;
-      border-radius: 20px;
-      padding: 5px 16px; font-size: 0.82rem; font-weight: 600;
-      margin-bottom: 20px; letter-spacing: 0.5px;
-    }
-    .hero h1 {
-      font-size: clamp(1.9rem, 5vw, 3.2rem);
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
+    .logo {
+      width: 42px; height: 42px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff; display: grid; place-items: center;
+      box-shadow: var(--shadow);
       font-weight: 900;
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 18px;
-      max-width: 780px; margin-inline: auto;
     }
-    .hero h1 em { color: var(--blue); font-style: normal; }
-    .hero-sub {
-      font-size: 1.1rem; color: var(--muted);
-      max-width: 560px; margin: 0 auto 36px;
+    .top-cta { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 48px; padding: 0 18px; border-radius: 999px;
+      font-weight: 700; border: 1px solid transparent;
+      transition: .2s ease;
     }
-    .hero-price-row {
-      display: flex; align-items: center; justify-content: center;
-      gap: 16px; flex-wrap: wrap; margin-bottom: 32px;
-    }
-    .price-tag {
-      font-size: 2.8rem; font-weight: 900; color: var(--white);
-    }
-    .price-sub { color: var(--muted); font-size: 0.9rem; }
-    .stock-badge {
-      background: rgba(34,197,94,0.15);
-      border: 1px solid rgba(34,197,94,0.4);
-      color: #4ade80; border-radius: 8px;
-      padding: 6px 14px; font-size: 0.88rem; font-weight: 600;
-    }
-    .hero-btns {
-      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
-    }
-    .btn-primary {
-      background: var(--blue);
-      color: #fff; border: none; border-radius: 12px;
-      padding: 16px 36px; font-size: 1.05rem; font-weight: 700;
-      cursor: pointer; text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      display: inline-flex; align-items: center; gap: 8px;
-    }
-    .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
-    .btn-wa {
-      background: #25d366;
-      color: #fff; border: none; border-radius: 12px;
-      padding: 16px 36px; font-size: 1.05rem; font-weight: 700;
-      cursor: pointer; text-decoration: none;
-      transition: background 0.2s, transform 0.15s;
-      display: inline-flex; align-items: center; gap: 10px;
-    }
-    .btn-wa:hover { background: #1fb959; transform: translateY(-2px); }
-
-    /* ===== PRODUCT IMAGE ===== */
-    .product-section {
-      background: var(--gray);
-      padding: 60px 24px;
-    }
-    .product-inner {
-      max-width: 1000px; margin: 0 auto;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 50px; align-items: center;
-    }
-    @media(max-width:700px) { .product-inner { grid-template-columns: 1fr; } }
-    .product-img-wrap {
-      border-radius: 20px; overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-      background: #fff;
-    }
-    .product-img-wrap img {
-      width: 100%; display: block;
-      object-fit: cover;
-    }
-    .product-info h2 {
-      font-size: 1.8rem; font-weight: 800;
-      color: var(--white); margin-bottom: 16px;
-    }
-    .product-info p { color: var(--muted); font-size: 1rem; line-height: 1.7; margin-bottom: 24px; }
-    .specs-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .specs-list li {
-      display: flex; align-items: center; gap: 12px;
-      color: var(--text); font-size: 0.98rem;
-    }
-    .spec-icon {
-      width: 36px; height: 36px; border-radius: 8px;
-      background: rgba(26,109,255,0.15);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; flex-shrink: 0;
-    }
-
-    /* ===== USE CASES ===== */
-    .use-section { padding: 70px 24px; }
-    .section-title {
-      text-align: center;
-      font-size: clamp(1.5rem, 4vw, 2.3rem);
-      font-weight: 800; color: var(--white);
-      margin-bottom: 10px;
-    }
-    .section-sub {
-      text-align: center; color: var(--muted);
-      font-size: 1rem; margin-bottom: 48px;
-    }
-    .cards-grid {
-      max-width: 1000px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-secondary { background: #fff; border-color: var(--line); }
+    .btn-secondary:hover { background: var(--surface-2); }
+    .hero { padding: 42px 0 28px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px; align-items: stretch;
     }
     .card {
-      background: var(--gray);
-      border: 1px solid var(--gray2);
-      border-radius: 16px; padding: 28px 22px;
-      text-align: center;
-      transition: border-color 0.2s, transform 0.2s;
+      background: var(--surface);
+      border: 1px solid rgba(215,222,230,.8);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
-    .card:hover { border-color: var(--blue); transform: translateY(-4px); }
-    .card-icon { font-size: 2.4rem; margin-bottom: 14px; }
-    .card h3 { font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-    .card p { font-size: 0.88rem; color: var(--muted); }
-
-    /* ===== BENEFITS ===== */
-    .benefits-section {
-      background: var(--gray);
-      padding: 70px 24px;
+    .hero-copy { padding: 36px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border-radius: 999px;
+      background: #edf4ff; color: var(--primary); font-size: 14px; font-weight: 700;
+      margin-bottom: 16px;
     }
-    .benefits-grid {
-      max-width: 900px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 6vw, 62px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
     }
-    .benefit-card {
-      background: var(--dark);
-      border: 1px solid var(--gray2);
-      border-radius: 16px; padding: 30px 24px;
+    .lead {
+      font-size: 18px; color: var(--muted); max-width: 58ch;
+      margin: 0 0 22px;
     }
-    .benefit-num {
-      font-size: 2rem; font-weight: 900;
-      color: var(--blue); margin-bottom: 10px;
+    .offer-line {
+      display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 22px;
     }
-    .benefit-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
-    .benefit-card p { font-size: 0.9rem; color: var(--muted); }
-
-    /* ===== WHAT IT DEMAGNETIZES ===== */
-    .items-section { padding: 70px 24px; }
-    .items-grid {
-      max-width: 800px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
+    .pill {
+      padding: 10px 14px; background: var(--surface-2); border-radius: 999px;
+      color: var(--text); font-weight: 700; font-size: 14px;
     }
-    .item-tag {
-      background: var(--gray);
-      border: 1px solid var(--gray2);
-      border-radius: 12px; padding: 18px 16px;
-      text-align: center;
-      font-size: 0.95rem; font-weight: 600; color: var(--text);
-      display: flex; flex-direction: column; align-items: center; gap: 10px;
-    }
-    .item-tag span { font-size: 1.8rem; }
-
-    /* ===== CTA ===== */
-    .cta-section {
-      background: linear-gradient(135deg, #0a1628 0%, #0d1f45 100%);
-      border-top: 1px solid rgba(26,109,255,0.2);
-      border-bottom: 1px solid rgba(26,109,255,0.2);
-      padding: 80px 24px; text-align: center;
-    }
-    .cta-section h2 {
-      font-size: clamp(1.6rem, 4vw, 2.5rem);
-      font-weight: 900; color: var(--white); margin-bottom: 12px;
-    }
-    .cta-section p { color: var(--muted); font-size: 1rem; margin-bottom: 36px; }
-    .cta-price {
-      font-size: 3.5rem; font-weight: 900; color: var(--white);
-      margin-bottom: 8px;
-    }
-    .cta-price span { color: var(--blue); }
-    .cta-note { color: var(--muted); font-size: 0.88rem; margin-bottom: 32px; }
-
-    /* ===== TRUST ===== */
-    .trust-section { padding: 60px 24px; }
-    .trust-row {
-      max-width: 800px; margin: 0 auto;
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .trust {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px;
     }
     .trust-item {
-      display: flex; align-items: center; gap: 12px;
-      color: var(--muted); font-size: 0.95rem;
+      background: var(--surface-2); border-radius: 18px; padding: 16px;
     }
-    .trust-icon { font-size: 1.8rem; }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--gray);
-      border-top: 1px solid var(--gray2);
-      padding: 30px 24px; text-align: center;
-      color: var(--muted); font-size: 0.85rem;
+    .trust-item strong { display: block; font-size: 22px; }
+    .hero-side { padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+    .mock-photo {
+      border-radius: 20px;
+      min-height: 280px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.85), rgba(235,241,248,.95)),
+        linear-gradient(135deg, rgba(15,98,254,.15), rgba(255,122,0,.12));
+      border: 1px solid rgba(215,222,230,.8);
+      position: relative; overflow: hidden;
+      display: grid; place-items: center;
     }
-    footer a { color: var(--muted); text-decoration: underline; }
-
-    /* ===== FLOATING WA ===== */
-    .float-wa {
-      position: fixed; bottom: 28px; right: 28px;
-      background: #25d366;
+    .mock-photo::before,
+    .mock-photo::after {
+      content: ""; position: absolute; border-radius: 24px;
+      background: linear-gradient(135deg, rgba(15,98,254,.16), rgba(255,122,0,.16));
+      filter: blur(2px);
+    }
+    .mock-photo::before { width: 180px; height: 180px; top: -20px; right: -10px; }
+    .mock-photo::after { width: 130px; height: 130px; bottom: -15px; left: -15px; }
+    .device {
+      width: 230px; height: 230px; border-radius: 36px;
+      background: linear-gradient(145deg, #1f2730, #10161c);
+      box-shadow: 0 25px 50px rgba(0,0,0,.25);
+      position: relative;
+    }
+    .device::before {
+      content: "220V"; position: absolute; top: 20px; left: 24px;
+      color: #c4d3e5; font-size: 14px; letter-spacing: .2em;
+    }
+    .device::after {
+      content: "DEGAUSS"; position: absolute; bottom: 22px; left: 24px;
+      color: #fff; font-size: 24px; font-weight: 800; letter-spacing: .08em;
+    }
+    .device-center {
+      position: absolute; inset: 65px 55px 70px;
+      border-radius: 50%; background: radial-gradient(circle, #3b4d5f 0%, #1a222b 55%, #0d1218 100%);
+      box-shadow: inset 0 0 0 10px #2b3641;
+    }
+    .price-box {
+      background: linear-gradient(135deg, #111926, #19273b);
+      color: #fff; border-radius: 20px; padding: 22px;
+    }
+    .price-box .small { color: rgba(255,255,255,.72); font-size: 14px; }
+    .price { font-size: 46px; font-weight: 900; margin: 10px 0 6px; }
+    .section { padding: 24px 0; }
+    .section-head { margin-bottom: 18px; }
+    .section-head h2 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 42px); }
+    .section-head p { margin: 0; color: var(--muted); }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .feature { padding: 24px; }
+    .feature-icon {
+      width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center;
+      background: linear-gradient(135deg, rgba(15,98,254,.12), rgba(255,122,0,.14));
+      margin-bottom: 16px; font-size: 22px;
+    }
+    .feature h3 { margin: 0 0 8px; font-size: 22px; }
+    .feature p { margin: 0; color: var(--muted); }
+    .usage {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+    }
+    .usage .card { padding: 26px; }
+    .checklist { display: grid; gap: 12px; margin-top: 12px; }
+    .check {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 12px 14px; border-radius: 16px; background: var(--surface-2);
+    }
+    .check b {
+      width: 24px; height: 24px; flex: 0 0 24px;
+      border-radius: 50%; background: var(--success); color: #fff;
+      display: grid; place-items: center; font-size: 14px;
+    }
+    .desc {
+      padding: 30px; font-size: 18px;
+    }
+    .desc p { margin: 0 0 16px; color: var(--muted); }
+    .cta {
+      padding: 28px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; align-items: center;
+      background: linear-gradient(135deg, #0f62fe, #1a7dff 55%, #ff7a00 180%);
       color: #fff;
-      width: 60px; height: 60px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.7rem; text-decoration: none;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.5);
-      transition: transform 0.2s;
-      z-index: 999;
     }
-    .float-wa:hover { transform: scale(1.1); }
+    .cta p { color: rgba(255,255,255,.85); }
+    .contact-box {
+      background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25);
+      border-radius: 20px; padding: 22px;
+    }
+    .contact-line { margin: 10px 0; font-size: 18px; font-weight: 700; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .gallery-item {
+      min-height: 220px; padding: 0; position: relative; overflow: hidden;
+    }
+    .gallery-item img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
+    .gallery-caption {
+      position: absolute; left: 16px; right: 16px; bottom: 16px; z-index: 2; margin: 0;
+      color: #fff; font-size: 18px; font-weight: 700;
+      text-shadow: 0 4px 20px rgba(0,0,0,.45);
+    }
+    .gallery-item::after {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(17,24,38,.68), rgba(17,24,38,.06) 52%, rgba(17,24,38,0));
+    }
+    .footer { padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
+    .note {
+      padding: 16px 18px; background: #fff6ea; color: #8f5200; border: 1px solid #ffd29f;
+      border-radius: 16px; margin-top: 16px;
+    }
+    @media (max-width: 980px) {
+      .hero-grid, .usage, .cta, .grid-3, .gallery { grid-template-columns: 1fr; }
+      .trust { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .topbar-inner { align-items: flex-start; flex-direction: column; }
+      .hero-copy, .hero-side, .desc, .feature, .cta, .usage .card { padding: 22px; }
+      .price { font-size: 38px; }
+      .btn { width: 100%; }
+      .hero-actions, .top-cta { flex-direction: column; }
+      .container { width: min(var(--container), calc(100% - 20px)); }
+    }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand" aria-label="Демагнитизатор 220В">
+        <span class="logo">D</span>
+        <span>Демагнитизатор 220В</span>
+      </a>
+      <div class="top-cta">
+        <a class="btn btn-secondary" href="tel:+79306008362">Позвонить</a>
+        <a class="btn btn-secondary" href="https://wa.me/79533701179" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a class="btn btn-primary" href="https://t.me/Russel731" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
+      </div>
+    </div>
+  </header>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">Демаг<span>нитизатор</span> 220В</div>
-  <a href="https://wa.me/79533701179?text=Здравствуйте!%20Хочу%20купить%20демагнитизатор%20220В%20за%202200₽" class="header-cta" target="_blank">Купить за 2 200 
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card hero-copy">
+          <div class="eyebrow">Профессиональное решение для снятия намагниченности</div>
+          <h1>Демагнитизатор-размагничиватель 220В для мастерской, СТО и дома</h1>
+          <p class="lead">Быстро помогает убрать остаточную намагниченность с металлических предметов, ручного инструмента, отвёрток, деталей механизмов и механических часов. Простое подключение, понятное использование и профессиональное качество для повседневной работы.</p>
+          <div class="offer-line">
+            <span class="pill">Для мастерских и сервиса</span>
+            <span class="pill">Подключение 220В</span>
+            <span class="pill">Готов к заказу</span>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+79306008362">Позвонить: +7 930 600-83-62</a>
+            <a class="btn btn-secondary" href="https://t.me/Russel731" target="_blank" rel="noopener noreferrer">Связаться в Telegram</a>
+          </div>
+          <div class="trust">
+            <div class="trust-item"><strong>220В</strong><span>Подключение к обычной сети</span></div>
+            <div class="trust-item"><strong>Быстро</strong><span>Подходит для точной и аккуратной работы</span></div>
+            <div class="trust-item"><strong>Удобно</strong><span>Для мастерской, сервиса и домашних задач</span></div>
+          </div>
+        </div>
+
+        <aside class="card hero-side">
+          <div class="mock-photo" aria-label="Фото демагнитизатора">
+            <img src="./generated-image-2026-04-03T094448.552.png" alt="Демагнитизатор-размагничиватель 220В" width="1200" height="900" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="price-box">
+            <div class="small">Профессиональное решение</div>
+            <div class="price" style="font-size:34px;">Подключение 220В</div>
+            <div class="small">Подходит для мастерских, СТО, производств, лабораторий и домашних нужд</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Почему этот размагничиватель удобен в работе</h2>
+          <p>Устройство создано как простое и надёжное решение для тех, кому важно быстро убрать остаточную намагниченность без сложной настройки.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Быстрое размагничивание</h3>
+            <p>Помогает оперативно снять остаточную намагниченность с металлических поверхностей, инструмента и деталей механизмов.</p>
+          </article>
+          <article class="card feature">
+            <div class="feature-icon">🛠️</div>
+            <h3>Простое подключение</h3>
+            <p>Работает от сети 220В, поэтому устройство легко встроить в рабочий процесс без лишних сложностей.</p>
+          </article>
+          <article class="card feature">
+            <div class="feature-icon">🧲</div>
+            <h3>Безопасное применение</h3>
+            <p>Подходит для чувствительных приборов и аккуратной работы с инструментом, механизмами и часами.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container usage">
+        <div class="card desc">
+          <h2>Описание товара</h2>
+          <p>Размагничивающее устройство — это надёжный помощник для тех, кто сталкивается с остаточной намагниченностью в повседневной работе. Если инструмент начинает притягивать металлическую стружку, детали мешают точной сборке или намагниченность влияет на корректную работу механизма, демагнитизатор помогает быстро устранить эту проблему.</p>
+          <p>Устройство профессионального качества подходит для мастерских, СТО, производств, лабораторий и домашних задач. Оно удобно в использовании и не требует сложной подготовки перед работой.</p>
+          <div class="note">Подходит для ручного инструмента, отвёрток, металлических деталей, элементов механизмов и механических часов.</div>
+        </div>
+        <div class="card">
+          <div class="desc">
+            <h2>Где используется</h2>
+            <div class="checklist">
+              <div class="check"><b>✓</b><span>В слесарных и ремонтных мастерских для ручного инструмента и металлических деталей.</span></div>
+              <div class="check"><b>✓</b><span>На СТО и в сервисе, когда нужно убрать намагниченность с рабочих элементов и инструмента.</span></div>
+              <div class="check"><b>✓</b><span>На производстве и в лаборатории, где важна чистая и точная работа с металлическими компонентами.</span></div>
+              <div class="check"><b>✓</b><span>Для домашних задач, когда нужен компактный и понятный в использовании размагничиватель.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Фотографии и визуальные блоки</h2>
+          <p>Сейчас в шаблоне стоят аккуратные визуальные карточки. Сюда можно загрузить реальные фото товара из объявления, и лендинг станет заметно сильнее по доверию и конверсии.</p>
+        </div>
+        <div class="gallery">
+          <article class="card gallery-item">
+            <img src="./generated-image-2026-04-03T094450.222.png" alt="Демагнитизатор в работе рядом с металлической шестерней" width="1200" height="900" loading="lazy">
+            <h3 class="gallery-caption">Применение в работе</h3>
+          </article>
+          <article class="card gallery-item">
+            <img src="./generated-image-2026-04-03T094448.552.png" alt="Демагнитизатор с кабелем и вилкой питания 220В" width="1200" height="900" loading="lazy">
+            <h3 class="gallery-caption">Подключение к сети 220В</h3>
+          </article>
+          <article class="card gallery-item">
+            <img src="./generated-image-2026-04-03T092504.993.png" alt="Корпус демагнитизатора крупным планом" width="1200" height="900" loading="lazy">
+            <h3 class="gallery-caption">Компактный корпус</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container card cta">
+        <div>
+          <h2 style="margin:0 0 10px; font-size: clamp(30px, 4vw, 48px);">Нужен размагничиватель без переплат?</h2>
+          <p style="margin:0; font-size:18px; max-width:56ch;">Свяжитесь удобным способом, чтобы уточнить наличие, задать вопрос по применению и быстро оформить заказ.</p>
+        </div>
+        <div class="contact-box">
+          <div class="contact-line">Телефон: <a href="tel:+79306008362">+7 930 600-83-62</a></div>
+          <div class="contact-line">Telegram: <a href="https://t.me/Russel731" target="_blank" rel="noopener noreferrer">@Russel731</a></div>
+          <div class="contact-line">WhatsApp: <a href="https://wa.me/79533701179" target="_blank" rel="noopener noreferrer">+7 953 370-11-79</a></div>
+          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;">
+            <a class="btn btn-secondary" href="tel:+79306008362" style="background:#fff; color:#111;">Позвонить сейчас</a>
+            <a class="btn btn-primary" href="https://t.me/Russel731" target="_blank" rel="noopener noreferrer" style="background:#111826;">Открыть Telegram</a>
+            <a class="btn btn-secondary" href="https://wa.me/79533701179" target="_blank" rel="noopener noreferrer" style="background:#fff; color:#111;">Написать в WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>Демагнитизатор-размагничиватель 220В. Подходит для металлических предметов, инструмента, деталей механизмов и механических часов.</div>
+    </div>
+  </footer>
+</body>
+</html>
